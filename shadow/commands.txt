@@ -1,0 +1,16 @@
+if you're doing an encrypted file
+
+openssl pkeyutl -in secret.enc -out john.out -inkey key.pem -decrypt
+john --wordlist=/usr/share/wordlists/rockyou.txt john.out
+
+if you're doing zip
+
+zip2john encrypted.zip > zip.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt zip.hash
+
+i know this is important but idk why
+unshadow blank.shadow > fucj.pem
+
+
+to show already cracked passwords
+john --show <hash that you cracked>
